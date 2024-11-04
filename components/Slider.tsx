@@ -16,7 +16,7 @@ export default function Slider() {
   }, [index]);
 
   return (
-    <div className="relative flex items-center w-full h-[130px] md:h-[380px] overflow-hidden">
+    <div className="relative flex items-center w-full h-[130px] md:h-[590px] overflow-hidden">
       <button
         onClick={prevSlide}
         className="absolute left-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-800 bg-transparent border-none cursor-pointer p-2 md:p-4 hover:bg-gray-200 rounded-full"

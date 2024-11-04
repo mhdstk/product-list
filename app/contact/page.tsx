@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center p-6 sm:p-8 md:p-12">
+    <div className="flex flex-col items-center p-6 sm:p-8 md:p-12 bg-gray-700">
       <h1 className="text-2xl md:text-3xl font-semibold mb-6 text-center">Contact Us</h1>
 
       {/* Form Container */}
-      <div className="w-full max-w-lg flex flex-col gap-4">
+      <div className="w-full  max-w-lg flex flex-col gap-4">
         <form className="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-md">
           <label htmlFor="name" className="text-sm font-medium">Name</label>
           <input
@@ -50,7 +50,7 @@ export default function Contact() {
       <div className="w-full max-w-lg mt-8 h-64 sm:h-80 rounded-lg overflow-hidden shadow-md">
         <iframe
           title="Map Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.2328525796933!2d-0.12775828423037296!3d51.50735077963595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b333a53c1bd%3A0xc5e4e2d8b6174839!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1612345678910!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.2205766655075!2d55.289443075371544!3d25.26316432902558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f431c62cc4e0b%3A0xa751a59cf3f62104!2sEverest%20City%20Mobile%20Trading!5e0!3m2!1sen!2sae!4v1730703908815!5m2!1sen!2sae"
           width="100%"
           height="100%"
           className="border-0"
