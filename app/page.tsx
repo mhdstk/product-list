@@ -1,12 +1,12 @@
 // pages/index.tsx
-import Slider from '../components/Slider';
-import ProductList from '../components/ProductList';
+import Slider from '../components/Slider'
+import MainSection from '../components/mainSection/MainSection'
 
-export default function HomePage() {
+export default function HomePage () {
   return (
-    <div>
+    <div className='bg-white'>
       <Slider />
-      <ProductList />
+      <MainSection />
     </div>
-  );
+  )
 }

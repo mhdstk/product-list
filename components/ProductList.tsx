@@ -1,14 +1,38 @@
 // components/ProductList.tsx
-"use client";
-
+"use client"
 //@ts-ignore 
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import {products} from  '../utils/data'
+import { useEffect, useState } from 'react';
 
 
 
+interface Props {
+  selectedCategory: string | null;
+  selectedBrands: string[] | null;
+  selectedPrice: string| null;
+}
 
-export default function ProductList() {
+export default function ProductList({selectedCategory,selectedBrands,selectedPrice}:Props) {
+
+ const [filteredProducts,setFilteredProducts]= useState(products)
+
+ useEffect(()=>{
+  if(selectedBrands){
+    setFilteredProducts(prev => prev.filter(i => selectedBrands.includes(i.brand)))
+  }
+  if(selectedCategory){
+    setFilteredProducts(prev => prev.filter(i => selectedCategory === i.category))
+
+  }
+
+  console.log(selectedPrice,'selectedPrice')
+  // if(selectedPrice){
+  //   setFilteredProducts(prev => prev.filter(i => selectedCategory === i.category))
+
+  // }
+
+ },[selectedCategory,selectedBrands,selectedPrice])
 
   return (
     <div className="bg-white">
