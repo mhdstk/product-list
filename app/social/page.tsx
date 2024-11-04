@@ -6,17 +6,18 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 const youtubePosts = [
   {
     id: 1,
-    title: "YouTube Post 1",
-    thumbnail: "https://via.placeholder.com/150", // Replace with actual thumbnail URL
-    description: "This is a description of YouTube Post 1.",
-    link: "https://youtube.com",
+    title: "Month End Special | Samsung |iPhone | Latest price List | Everest City Mobile Trading",
+    thumbnail: "yt1.png", // Replace with actual thumbnail URL
+    description: "S23 ULTRA. , S24 ULTRA , IPHONE 15 PRO , IPHONE 15 PRO MAX  PRICE  കുത്തനെ  താഴോട്ട്  IN DUBAI /BBA",
+    link: "https://youtu.be/bDARTd0g1vk",
+    
   },
   {
     id: 2,
-    title: "YouTube Post 2",
-    thumbnail: "https://via.placeholder.com/150",
-    description: "This is a description of YouTube Post 2.",
-    link: "https://youtube.com",
+    title: "Iphone 15promax Giveaway | Latest used mobile price | Dubai cheapest mobile | Everest City Mobile",
+    thumbnail: "yt2.png",
+    description: "DUBAI SECOND HAND MOBILE MARKET, USED IPHONE PRICE IN DUBAI, IPHONE 14 PRO MAX, IPHONE 13 PRO MAX",
+    link: "https://youtu.be/9riFxDmHFXw",
   },
 ];
 
