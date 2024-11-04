@@ -1,6 +1,10 @@
 // components/ProductList.tsx
 "use client";
 
+//@ts-ignore 
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
+
 
 const products = [
   {
@@ -139,7 +143,7 @@ export default function ProductList() {
                   href={product.href}
                   className="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-8 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200"
                 >
-                  Enquire Now<span className="sr-only">, {product.name}</span>
+                  <WhatsAppIcon /> Enquire Now<span className="sr-only">, {product.name}</span>
                 </a>
               </div>
             </div>
