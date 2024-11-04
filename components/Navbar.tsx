@@ -19,8 +19,9 @@ export default function Navbar() {
       </div>
       </Link>
       <div style={styles.links}>
-        <Link href="/about">About Us</Link>
-        <Link href="/contact">Contact Us</Link>
+        <Link className="text-[14px] md:text-[18px]" href="/about">About Us</Link>
+        <Link className="text-[14px] md:text-[18px]" href="/social">Social</Link>
+        <Link className="text-[14px] md:text-[18px]" href="/contact">Contact Us</Link>
       </div>
     </nav>
   );
