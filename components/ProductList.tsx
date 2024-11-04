@@ -17,22 +17,27 @@ export default function ProductList({selectedCategory,selectedBrands,selectedPri
 
  const [filteredProducts,setFilteredProducts]= useState(products)
 
- useEffect(()=>{
-  if(selectedBrands){
-    setFilteredProducts(prev => prev.filter(i => selectedBrands.includes(i.brand)))
+ useEffect(() => {
+  let updatedProducts = products;
+
+  // Filter by selected brands
+  if (selectedBrands && selectedBrands.length > 0) {
+    updatedProducts = updatedProducts.filter(product => selectedBrands.includes(product.brand));
   }
-  if(selectedCategory){
-    setFilteredProducts(prev => prev.filter(i => selectedCategory === i.category))
 
+  // Filter by selected category
+  if (selectedCategory) {
+    updatedProducts = updatedProducts.filter(product => product.category === selectedCategory);
   }
 
-  console.log(selectedPrice,'selectedPrice')
-  // if(selectedPrice){
-  //   setFilteredProducts(prev => prev.filter(i => selectedCategory === i.category))
-
+  // // Filter by selected price range
+  // if (selectedPrice) {
+  //   updatedProducts = updatedProducts.filter(product => product.price >= selectedPrice.min && product.price <= selectedPrice.max);
   // }
 
- },[selectedCategory,selectedBrands,selectedPrice])
+  // Update the filtered products
+  setFilteredProducts(updatedProducts);
+}, [selectedCategory, selectedBrands, selectedPrice]);
 
   return (
     <div className="bg-white">
@@ -40,7 +45,7 @@ export default function ProductList({selectedCategory,selectedBrands,selectedPri
         <h2 className="text-xl font-bold text-gray-900">Customers also bought</h2>
 
         <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <div key={product.id}>
               <div className="relative">
                 <div className="relative h-72 w-full overflow-hidden rounded-lg">
