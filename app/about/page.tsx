@@ -8,7 +8,7 @@ export default function AboutUs() {
         {/* Left Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="https://via.placeholder.com/500x300" // replace with your actual image URL if available
+            src="everestlogo.png" // replace with your actual image URL if available
             alt="About Everest City Mobiles"
             className="w-full h-auto rounded-lg shadow-md"
           />
