@@ -10,15 +10,17 @@ import { useEffect, useState } from 'react';
 interface Props {
   selectedCategory: string | null;
   selectedBrands: string[] | null;
-  selectedPrice: string| null;
+  selectedPrice: any| null;
 }
 
 export default function ProductList({selectedCategory,selectedBrands,selectedPrice}:Props) {
 
  const [filteredProducts,setFilteredProducts]= useState(products)
 
+ 
  useEffect(() => {
   let updatedProducts = products;
+  console.log(products,'products')
 
   // Filter by selected brands
   if (selectedBrands && selectedBrands.length > 0) {
@@ -30,10 +32,10 @@ export default function ProductList({selectedCategory,selectedBrands,selectedPri
     updatedProducts = updatedProducts.filter(product => product.category === selectedCategory);
   }
 
-  // // Filter by selected price range
-  // if (selectedPrice) {
-  //   updatedProducts = updatedProducts.filter(product => product.price >= selectedPrice.min && product.price <= selectedPrice.max);
-  // }
+  // Filter by selected price range
+  if (selectedPrice) {
+    updatedProducts = updatedProducts.filter(product => product.price >= selectedPrice.min && product.price <= selectedPrice.max);
+  }
 
   // Update the filtered products
   setFilteredProducts(updatedProducts);
@@ -65,7 +67,7 @@ export default function ProductList({selectedCategory,selectedBrands,selectedPri
                     aria-hidden="true"
                     className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
                   />
-                  <p className="relative text-lg font-semibold text-white">{product.price}</p>
+                  <p className="relative text-lg font-semibold text-white">AED {product.price}</p>
                 </div>
               </div>
               <div className="mt-6">
